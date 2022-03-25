@@ -15,10 +15,10 @@ namespace LiveSplit.UI.Components
 
         public string UpdateName => ComponentName;
 
-        public string XMLURL => "http://livesplit.org/update/Components/update.HBMods.LiveSplit.IPSplitter.xml";
+        public string XMLURL => "http://livesplit.org/update/Components/update/HBMods.LiveSplit.IPSplitter.xml";
 
         public string UpdateURL => "http://livesplit.org/update/";
 
-        public Version Version => Version.Parse("1.8.0");
+        public Version Version => Version.Parse("1.0.0");
     }
 }

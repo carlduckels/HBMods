@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IncreaseStructureSpawns.cs" />
+    <Compile Include="IncreaseStructures.cs" />
     <Compile Include="Helpers\UpdateCountsFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -9,9 +9,9 @@ using static ZoneSystem;
 
 namespace HBMods.Valheim.IncreaseStructures
 {
-    [BepInPlugin("HoneyBadger.IncreaseStructureSpawns", "HoneyBadger - Increase Structure Spawns", "1.0.0")]
+    [BepInPlugin("HoneyBadger.IncreaseStructures", "HoneyBadger - Increase Structure Spawns", "1.0.0")]
     [BepInProcess("valheim.exe")]
-    public class IncreaseStructureSpawns : BaseUnityPlugin
+    public class IncreaseStructures : BaseUnityPlugin
     {
         private readonly Harmony _harmony = new Harmony("HoneyBadger.IncreaseStructureSpawns");
 

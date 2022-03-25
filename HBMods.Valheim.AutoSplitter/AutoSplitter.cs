@@ -10,7 +10,7 @@ namespace HBMods.Valheim.AutoSplitter
 {
     [BepInPlugin("badger.ValheimModAutosplitter", "BadgerMod - Autosplitter", "1.0.0")]
     [BepInProcess("valheim.exe")]
-    public class ValheimModAutosplitter : BaseUnityPlugin
+    public class AutoSplitter : BaseUnityPlugin
     {
         private readonly Harmony _harmony = new Harmony("badger.ValheimModAutosplitter");
 
