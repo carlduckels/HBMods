@@ -48,9 +48,11 @@ namespace HBMods.Valheim.IncreaseStructures
                 {
                     _printDebug = false;
 
+                    Debug.Log($"Debug Zone Location: PrefabName, Qty, Enable, IsAddedToMap, Biome(s)");
+
                     foreach (ZoneLocation item in ___m_locations)
                     {
-                        Debug.Log($"Item Debug: {item.m_prefabName,-24} = {item.m_quantity}");
+                        DebugZoneLocation(item);
                     }
                 }
 
@@ -73,5 +75,34 @@ namespace HBMods.Valheim.IncreaseStructures
                 return true;
             }
         }
+
+
+        private static void DebugZoneLocation(ZoneLocation item)
+        {
+            Debug.Log($"Debug Zone Location: {item.m_prefabName}, {item.m_quantity}, {item.m_enable}, {IsAddedToMap(item)}, {BiomeToList(item.m_biome)}");
+        }
+
+
+        private static bool IsAddedToMap(ZoneLocation item) => (item.m_quantity > 0) && (item.m_enable);
+
+
+        private static string BiomeToList(Heightmap.Biome biome)
+        {
+            List<string> biomes = new List<string>();
+
+            if (HasBiome(biome, Heightmap.Biome.Meadows)) biomes.Add(Heightmap.Biome.Meadows.ToString());
+            if (HasBiome(biome, Heightmap.Biome.Swamp)) biomes.Add(Heightmap.Biome.Swamp.ToString());
+            if (HasBiome(biome, Heightmap.Biome.Mountain)) biomes.Add(Heightmap.Biome.Mountain.ToString());
+            if (HasBiome(biome, Heightmap.Biome.BlackForest)) biomes.Add(Heightmap.Biome.BlackForest.ToString());
+            if (HasBiome(biome, Heightmap.Biome.Plains)) biomes.Add(Heightmap.Biome.Plains.ToString());
+            if (HasBiome(biome, Heightmap.Biome.AshLands)) biomes.Add(Heightmap.Biome.AshLands.ToString());
+            if (HasBiome(biome, Heightmap.Biome.DeepNorth)) biomes.Add(Heightmap.Biome.DeepNorth.ToString());
+            if (HasBiome(biome, Heightmap.Biome.Ocean)) biomes.Add(Heightmap.Biome.Ocean.ToString());
+            if (HasBiome(biome, Heightmap.Biome.Mistlands)) biomes.Add(Heightmap.Biome.Mistlands.ToString());
+
+            return string.Join(" | ", biomes);
+        }
+
+        private static bool HasBiome(Heightmap.Biome biomeBits, Heightmap.Biome biome) => ((biomeBits & biome) == biome);
     }
 }
