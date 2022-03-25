@@ -34,7 +34,7 @@ namespace HBMods.Valheim.IncreaseStructures
         {
             _countUpdates = new UpdateCountsFile();
 
-            string fileName = "BepInEx\\config\\UpdateCounts.cfg";
+            string fileName = "BepInEx\\config\\IncreaseStructures.cfg";
 
             _countUpdates.ReadFile(fileName);
         }

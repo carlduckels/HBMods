@@ -32,11 +32,16 @@ namespace HBMods.Valheim.IncreaseStructures.Helpers
         {
             List<string> data = new List<string>();
 
-            data.Add("; AshLands");
+            data.Add("# Configuration for HoneyBadger's Increase Structure Spawns");
+            data.Add("");
+            data.Add("# Link: https://github.com/carlduckels/HBMods");
+            data.Add("");
+            data.Add("");
+            data.Add("# AshLands");
             data.Add("Meteorite = 500");
             data.Add("");
             data.Add("");
-            data.Add("; BlackForest");
+            data.Add("# BlackForest");
             data.Add("Crypt2 = 200");
             data.Add("Crypt3 = 200");
             data.Add("Crypt4 = 200");
@@ -57,7 +62,7 @@ namespace HBMods.Valheim.IncreaseStructures.Helpers
             data.Add("Vendor_BlackForest = 10");
             data.Add("");
             data.Add("");
-            data.Add("; Meadows");
+            data.Add("# Meadows");
             data.Add("Eikthyrnir = 3");
             data.Add("Runestone_Boars = 50");
             data.Add("Runestone_Meadows = 100");
@@ -81,13 +86,13 @@ namespace HBMods.Valheim.IncreaseStructures.Helpers
             data.Add("WoodVillage1 = 15");
             data.Add("");
             data.Add("");
-            data.Add("; Meadows | BlackForest");
+            data.Add("# Meadows | BlackForest");
             data.Add("Dolmen01 = 100");
             data.Add("Dolmen02 = 100");
             data.Add("Dolmen03 = 50");
             data.Add("");
             data.Add("");
-            data.Add("; Mountain");
+            data.Add("# Mountain");
             data.Add("AbandonedLogCabin02 = 33");
             data.Add("AbandonedLogCabin03 = 33");
             data.Add("AbandonedLogCabin04 = 50");
@@ -104,7 +109,7 @@ namespace HBMods.Valheim.IncreaseStructures.Helpers
             data.Add("Waymarker02 = 50");
             data.Add("");
             data.Add("");
-            data.Add("; Plains");
+            data.Add("# Plains");
             data.Add("GoblinCamp2 = 200");
             data.Add("GoblinKing = 4");
             data.Add("Ruin3 = 50");
@@ -122,7 +127,7 @@ namespace HBMods.Valheim.IncreaseStructures.Helpers
             data.Add("TarPit3 = 100");
             data.Add("");
             data.Add("");
-            data.Add("; Swamp");
+            data.Add("# Swamp");
             data.Add("Bonemass = 5");
             data.Add("FireHole = 200");
             data.Add("Grave1 = 200");
@@ -140,14 +145,14 @@ namespace HBMods.Valheim.IncreaseStructures.Helpers
             data.Add("SwampWell1 = 25");
             data.Add("");
             data.Add("");
-            data.Add("; Swamp | BlackForest | Plains | Ocean");
+            data.Add("# Swamp | BlackForest | Plains | Ocean");
             data.Add("ShipWreck01 = 25");
             data.Add("ShipWreck02 = 25");
             data.Add("ShipWreck03 = 25");
             data.Add("ShipWreck04 = 25");
             data.Add("");
             data.Add("");
-            data.Add("; Debug Options");
+            data.Add("# Debug Options");
             data.Add("DebugPrintOptions = 0");
 
             File.WriteAllLines(fileName, data);
@@ -158,7 +163,12 @@ namespace HBMods.Valheim.IncreaseStructures.Helpers
             if (string.IsNullOrEmpty(line))
                 return false;
 
-            if (line.Trim().StartsWith(";"))
+            if (line.Trim().StartsWith(";")
+                || line.Trim().StartsWith("#")
+                || line.Trim().StartsWith("@")
+                || line.Trim().StartsWith("-")
+                || line.Trim().StartsWith("*")
+                || line.Trim().StartsWith("'"))
                 return false;
 
             if (!line.Contains("="))
