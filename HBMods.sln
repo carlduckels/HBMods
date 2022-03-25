@@ -7,20 +7,33 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBMods.Valheim.IncreaseStru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBMods.Valheim.AutoSplitter", "HBMods.Valheim.AutoSplitter\HBMods.Valheim.AutoSplitter.csproj", "{DC0E7C25-530F-4B29-BB7B-CBAB2AE26A46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBMods.LiveSplit.IPSplitter", "HBMods.LiveSplit.IPSplitter\HBMods.LiveSplit.IPSplitter.csproj", "{BE9D4E57-20C6-4384-A3DC-AA365E11FFD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release Candidate|Any CPU = Release Candidate|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D3F7F13D-1BF1-4804-984D-E991658B1FBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3F7F13D-1BF1-4804-984D-E991658B1FBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F7F13D-1BF1-4804-984D-E991658B1FBB}.Release Candidate|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F7F13D-1BF1-4804-984D-E991658B1FBB}.Release Candidate|Any CPU.Build.0 = Release|Any CPU
 		{D3F7F13D-1BF1-4804-984D-E991658B1FBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3F7F13D-1BF1-4804-984D-E991658B1FBB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC0E7C25-530F-4B29-BB7B-CBAB2AE26A46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC0E7C25-530F-4B29-BB7B-CBAB2AE26A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0E7C25-530F-4B29-BB7B-CBAB2AE26A46}.Release Candidate|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0E7C25-530F-4B29-BB7B-CBAB2AE26A46}.Release Candidate|Any CPU.Build.0 = Release|Any CPU
 		{DC0E7C25-530F-4B29-BB7B-CBAB2AE26A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC0E7C25-530F-4B29-BB7B-CBAB2AE26A46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE9D4E57-20C6-4384-A3DC-AA365E11FFD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE9D4E57-20C6-4384-A3DC-AA365E11FFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE9D4E57-20C6-4384-A3DC-AA365E11FFD2}.Release Candidate|Any CPU.ActiveCfg = Release Candidate|Any CPU
+		{BE9D4E57-20C6-4384-A3DC-AA365E11FFD2}.Release Candidate|Any CPU.Build.0 = Release Candidate|Any CPU
+		{BE9D4E57-20C6-4384-A3DC-AA365E11FFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE9D4E57-20C6-4384-A3DC-AA365E11FFD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
